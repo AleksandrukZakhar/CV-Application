@@ -1,4 +1,20 @@
-const GeneralInfo = ({ setFirstName, setLastName, setEmail, setPhone }) => {
+const GeneralInfo = ({
+    setFirstName,
+    setLastName,
+    setEmail,
+    setPhone,
+    setDescription,
+    setPhoto,
+}) => {
+    const photoHandler = (file) => {
+        const fileReader = new FileReader();
+        fileReader.readAsDataURL(file);
+
+        fileReader.onload((x) => {
+            setPhoto(x.target);
+        });
+    };
+
     return (
         <div className="input-container">
             <h2>General Info</h2>
@@ -21,6 +37,16 @@ const GeneralInfo = ({ setFirstName, setLastName, setEmail, setPhone }) => {
                 type="tel"
                 placeholder="Phone number"
                 onChange={(e) => setPhone(e.target.value)}
+            />
+            <textarea
+                defaultValue="Info about yourself"
+                onChange={(e) => setDescription(e.target.value)}
+            ></textarea>
+            <p>Photo:</p>
+            <input
+                type="file"
+                accept="images/*"
+                onChange={(e) => photoHandler(e.target.files[0])}
             />
         </div>
     );

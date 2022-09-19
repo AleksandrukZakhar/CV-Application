@@ -12,6 +12,8 @@ const App = () => {
     const [lastName, setLastName] = useState();
     const [email, setEmail] = useState();
     const [phone, setPhone] = useState();
+    const [description, setDescription] = useState();
+    const [photo, setPhoto] = useState();
 
     //Education Info states
 
@@ -24,6 +26,7 @@ const App = () => {
 
     const [company, setCompany] = useState();
     const [position, setPosition] = useState();
+    const [details, setDetails] = useState();
     const [workFrom, setWorkFrom] = useState();
     const [workTo, setWorkTo] = useState();
 
@@ -35,14 +38,38 @@ const App = () => {
                 setLastName={setLastName}
                 setEmail={setEmail}
                 setPhone={setPhone}
+                setDescription={setDescription}
+                setPhoto={setPhoto}
             />
-            <Education />
-            <Experience />
+            <Education
+                setUniversity={setUniversity}
+                setSubject={setSubject}
+                setFrom={setFrom}
+                setTo={setTo}
+            />
+            <Experience
+                setCompany={setCompany}
+                setPosition={setPosition}
+                setDetails={setDetails}
+                setWorkFrom={setWorkFrom}
+                setWorkTo={setWorkTo}
+            />
             <CV
                 firstName={firstName}
                 lastName={lastName}
                 email={email}
                 phone={phone}
+                description={description}
+                photo={photo}
+                university={university}
+                subject={subject}
+                from={from}
+                to={to}
+                company={company}
+                position={position}
+                details={details}
+                workFrom={workFrom}
+                workTo={workTo}
             />
         </div>
     );
