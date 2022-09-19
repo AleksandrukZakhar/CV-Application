@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/AleksandrukZakhar/cv-application/static/css/main.d1772588.css",
+    "main.js": "/AleksandrukZakhar/cv-application/static/js/main.690d8627.js",
+    "index.html": "/AleksandrukZakhar/cv-application/index.html",
+    "main.d1772588.css.map": "/AleksandrukZakhar/cv-application/static/css/main.d1772588.css.map",
+    "main.690d8627.js.map": "/AleksandrukZakhar/cv-application/static/js/main.690d8627.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d1772588.css",
+    "static/js/main.690d8627.js"
+  ]
+}
