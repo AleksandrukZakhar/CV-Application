@@ -8,11 +8,12 @@ const GeneralInfo = ({
 }) => {
     const photoHandler = (file) => {
         const fileReader = new FileReader();
-        fileReader.readAsDataURL(file);
 
-        fileReader.onload((x) => {
-            setPhoto(x.target);
-        });
+        fileReader.addEventListener("load", () => setPhoto(fileReader.result));
+
+        if (file) {
+            fileReader.readAsDataURL(file);
+        }
     };
 
     return (

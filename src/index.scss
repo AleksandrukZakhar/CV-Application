@@ -112,6 +112,12 @@ textarea {
     background-color: $grey-primary;
     color: $black-primary;
     font-size: 1.7rem;
+
+    img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+    }
 }
 
 .main {
