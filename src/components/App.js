@@ -33,7 +33,7 @@ const App = () => {
 
     const generatePDF = () => {
         const cv = document.querySelector(".CV");
-        const report = new JsPDF("portrait", "pt", "a4");
+        const report = new JsPDF("portrait", "pt", "a2");
 
         report
             .html(cv)
