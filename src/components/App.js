@@ -4,6 +4,7 @@ import Education from "./Education.js";
 import Experience from "./Experience.js";
 import CV from "./CV.js";
 import { useState } from "react";
+import JsPDF from "jspdf";
 
 const App = () => {
     //General Info states
@@ -29,6 +30,20 @@ const App = () => {
     const [details, setDetails] = useState();
     const [workFrom, setWorkFrom] = useState();
     const [workTo, setWorkTo] = useState();
+
+    const generatePDF = () => {
+        const cv = document.querySelector(".CV");
+        const report = new JsPDF("portrait", "pt", "a4");
+
+        report
+            .html(cv)
+            .then(() => {
+                report.save("report.pdf");
+            })
+            .catch((err) => {
+                throw Error(err);
+            });
+    };
 
     return (
         <div className="App">
@@ -71,6 +86,9 @@ const App = () => {
                 workFrom={workFrom}
                 workTo={workTo}
             />
+            <button className="download" onClick={() => generatePDF()}>
+                Download PDF
+            </button>
         </div>
     );
 };
