@@ -24,9 +24,15 @@ const CV = ({
             </div>
             <div className="container">
                 <div className="personal-info">
-                    <img src={photo} alt="personal" />
-                    <p>Email: {email}</p>
-                    <p>Phone Number: {phone}</p>
+                    <div class="center">
+                        <img src={photo} alt="personal" />
+                    </div>
+                    <p>
+                        Email: <p className="small">{email}</p>
+                    </p>
+                    <p>
+                        Tel: <p className="small">{phone}</p>
+                    </p>
                 </div>
                 <div className="main">
                     <div>
