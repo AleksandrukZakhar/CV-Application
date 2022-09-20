@@ -14,7 +14,9 @@ const App = () => {
     const [email, setEmail] = useState();
     const [phone, setPhone] = useState();
     const [description, setDescription] = useState();
-    const [photo, setPhoto] = useState();
+    const [photo, setPhoto] = useState(
+        "https://cdn-icons-png.flaticon.com/512/149/149071.png"
+    );
 
     //Education Info states
 
